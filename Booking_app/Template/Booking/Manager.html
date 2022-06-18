@@ -1,0 +1,27 @@
+
+{% extends "Booking\User.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+ <div style ="margin: 50px">
+    <div class = "container">
+        <h1>BOOKING PORTAL</h1>
+        <h2>Authorized User Only</h2>
+        <p>Register your Details here </p>  
+        <form method="post">
+            {% csrf_token %}
+            {{ form|crispy }}
+    
+         <div>
+            <button type="submit" class="btn btn-primary submit">Register</button>
+        </div> 
+        
+                    <p>Secure your details</p>
+                    
+     </form>
+    </div>
+    
+</div>
+ {% endblock content %}

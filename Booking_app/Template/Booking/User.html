@@ -1,0 +1,110 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'management/https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css' %}" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="{% static 'management/register.css' %}"/> 
+    
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+             
+        <div class="logo">
+            <p> HOTEL SYSTEM Ltd</p>  </div>
+        <ul>
+          <li><a href="{% url 'Booking:loginview' %}">Login</a></li>
+          <li><a href="{% url 'Booking:Managerview' %}">Register</a></li>
+          <li><a href="{% url 'Booking:loginview' %}">Add Customers</a></li>
+          <li><a href="{% url 'Booking:portalview' %}">Back to Portal</a></li>
+        </ul>
+    </nav>
+
+</header>
+{% block content %}
+<title> HOTEL SYSTEM</title>
+<main class="flex">
+    
+    <div class="container">
+        <div class="title"><b>BOOKING PORTAL</b></div>
+        <h3>Add New Customers</h3>
+          <form method="post">
+            {% csrf_token %}
+        <div class="content">
+          <form action="#">
+                <div class="user-details">
+              <div class="input-box">
+                <span class="details">Occupant Name</span>
+                <input type="text" placeholder="Enter your name" name = 'occupant_name' required>
+              </div>
+              <div class="input-box">
+                <span class="details">Occupant Email</span>
+                <input type="email" placeholder="Enter your email" name = 'occupant_email' required>
+              </div>
+              <div class="input-box">
+                <span class="details">Occupant Occupation</span>
+                <input type="text" placeholder="What do you do?" name = 'occupant_work' required>
+              </div>
+              <div class="input-box">
+                <span class="details">Amount paid</span>
+                <input type="text" name = 'amount_paid' required>
+              </div>
+              <div class="input-box">
+                <span class="details">Room Number</span>
+                <input type="number" name = 'room_number'  required>
+              </div>
+              <div class="input-box">
+                <span class="details">Number of nights</span>
+                <input type="number"   name = 'duration'required>
+              </div>
+              <div class="input-box">
+                <span class="details">Start date</span>
+                <input type="date"  name = 'checkin' required>
+              </div>
+              <div class="input-box">
+                <span class="details">End date</span>
+                <input type="date"  name = 'checkout' required>
+              </div>                
+                <button>Add Customer</button>
+          </form>
+        </div>
+      </div>
+    </main>
+      <div class="Logout">
+        <a href="{% url 'management:logoutview' %}" class="home-btn"> Logout</a>
+                                 
+        
+
+       </div>
+       {% endblock content %}
+       {% comment %} <footer>
+        <div class="footer">
+        <div class="row">
+      
+        <a href="https://www.linkedin.com/in/okadu-ediabai-178958236/"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/Bright-Bai"><i class="fa-brands fa-github"></i></a>
+        <a href="https://twitter.com/Dev_Abai"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+        
+        <div class="row">
+        <ul>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">Our Services</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Career</a></li>
+        </ul>
+        </div>
+        
+        <div class="row">
+        XYZ Copyright &copy; 2022  - All rights reserved || Designed By: Oyebola
+        </div>
+        </div>
+        </footer> {% endcomment %}
+</body>
+</html>

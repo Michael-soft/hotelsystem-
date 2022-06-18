@@ -1,12 +1,12 @@
 from django.urls import path
+from .views import Customer,Contact
 
-from Customer_app.models import Customer_Room 
-from .import views
 
-urlpatterns = [
 
-    path('Customer_Room',views.Customer_Room/index.html,name='Customer_Room'),
-    
+app_name = "Customer_app"
+
+urlpatterns = [                                
+    path("", Customer, name = "Contactcview"),
+    path("Contact", Contact, name = "contactview"),
 ]
-
 

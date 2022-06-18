@@ -1,0 +1,30 @@
+
+{% extends "Booking\User.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+ <div style ="margin: 50px">
+    <div class = "container">
+        <h1> WELCOME</h1>
+        <p>Welcome to your Portal </p>  
+        <form method="post">
+            {% csrf_token %}
+            {{ form|crispy }}
+    
+         <div>
+            <button type="submit" class="btn btn-primary submit">Login</button>
+        </div> 
+                    <p> secure</p>
+        <div>
+            <p> click the link below to register</p>
+            <a href="{% url 'Booking:Managerview' %}"><b>Register</b></a>
+        </div> 
+                        <p> secure</p>
+                        
+     </form>
+    </div>
+    
+</div>
+ {% endblock content %}
