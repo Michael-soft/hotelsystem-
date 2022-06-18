@@ -1,12 +1,9 @@
 from django.urls import path
+from .import views
 
-app_name = "Booking_app"
-
-urlpatterns = [ 
-    path( )
-
-
-    
-
+urlpatterns = [
+    path('',views.index,name='index'),
+    path('Contact',views.Contact/Contact.html,name='Contact'),
+    path('Booking',views.Booking/Booking,name='Booking'),
+    Path('booked_on/<str:id>',views.booked_on,name='booked_on'),
 ]
-
