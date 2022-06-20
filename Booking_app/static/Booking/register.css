@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@400;700&family=Poppins&display=swap");
 * {
   margin: 0;
@@ -176,7 +177,7 @@ button:hover {
   opacity: 0.7;
 }
 
-.home-btn {
+.Customer_app-btn {
   position: relative;
   padding: 1rem 2rem 0.5rem 2.5rem;
   color: var(--background-color);
@@ -188,13 +189,13 @@ button:hover {
   margin-bottom: var(--margin-bottom);
 }
 
-.home {
+.Customer_app {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.home-btn:before {
+.Customer_app-btn:before {
   content: "";
   position: absolute;
   top: 0.5rem;
@@ -209,44 +210,12 @@ button:hover {
   transition: all 0.3s ease-in-out;
 }
 
-.home-btn:hover {
+.Customer_app-btn:hover {
   padding: 0.75rem 2.25rem;
 }
 
-.home-btn:hover:before {
+.Customer_app-btn:hover:before {
   top: 0;
   left: 0;
 }
-/* 
-.footer {
-  background: rgb(253, 253, 253);
-  padding: 15px 0px;
-  text-align: center;
-}
-.footer .row {
-  width: 100%;
-  margin: 10px 0;
-  padding: 6px 0px;
-  color: var(--text2);
-  font-size: 0.8rem;
-}
-.footer .row a {
-  text-decoration: none;
-  color: var(--text2);
-}
-.footer .row a:hover {
-  color: var(--text);
-  transform: translate(0, -10px);
-  transition: 0.4s;
-}
-.footer .row ul {
-  width: 100%;
-}
-.footer .row ul li {
-  display: inline-block;
-  margin: 0px 30px;
-}
-.footer .row a i {
-  font-size: 2em;
-  margin: 0% 1%;
-} */
+

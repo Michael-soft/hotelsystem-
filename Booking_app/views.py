@@ -10,13 +10,13 @@ def Manager(request):
         user_data = UserCreationForm(request.POST)
         if user_data.is_valid():
             user_data.save()
-            return redirect("Booking:loginview")
+            return redirect("Booking_app:loginview")
         else:
             pass
         context ={  
             "form": UserCreationForm()
         }
-        return render(request, "Booking/manager.html",context)
+        return render(request, "Booking_app/manager.html",context)
 
 def User(request):
     if request.method =="POST":
@@ -41,15 +41,15 @@ def User(request):
                                )
 
         new_customer.save()
-        return redirect('Booking: portalview')
+        return redirect('Booking_app: portalview')
 
-    return render(request,"Booking/User.html")
+    return render(request,"Booking_app/User.html")
 
 def login(request):
-    return redirect("Booking:userview")
+    return redirect("Booking_app:userview")
 
 def Portal(request):
-    return render(request,"Booking/portal.html")
+    return render(request,"Booking_app/portal.html")
 
 
 

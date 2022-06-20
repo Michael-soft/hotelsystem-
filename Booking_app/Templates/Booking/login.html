@@ -1,8 +1,6 @@
 
-{% extends "Booking\User.html" %}
-
+{% extends "Booking_app\User.html" %}
 {% load crispy_forms_tags %}
-
 {% block content %}
 
  <div style ="margin: 50px">
@@ -19,7 +17,7 @@
                     <p> secure</p>
         <div>
             <p> click the link below to register</p>
-            <a href="{% url 'Booking:Managerview' %}"><b>Register</b></a>
+            <a href="{% url 'Booking_app:Managerview' %}"><b>Register</b></a>
         </div> 
                         <p> secure</p>
                         

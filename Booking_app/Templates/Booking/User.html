@@ -1,14 +1,13 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'management/https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css' %}" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'Booking_app/https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css' %}" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="{% static 'management/register.css' %}"/> 
+    <link rel="stylesheet" href="{% static 'Booking_app/register.css' %}"/> 
     
 </head>
 <body>
@@ -18,10 +17,10 @@
         <div class="logo">
             <p> HOTEL SYSTEM Ltd</p>  </div>
         <ul>
-          <li><a href="{% url 'Booking:loginview' %}">Login</a></li>
-          <li><a href="{% url 'Booking:Managerview' %}">Register</a></li>
-          <li><a href="{% url 'Booking:loginview' %}">Add Customers</a></li>
-          <li><a href="{% url 'Booking:portalview' %}">Back to Portal</a></li>
+          <li><a href="{% url 'Booking_app:loginview' %}">Login</a></li>
+          <li><a href="{% url 'Booking_app:Managerview' %}">Register</a></li>
+          <li><a href="{% url 'Booking_app:loginview' %}">Add Customers</a></li>
+          <li><a href="{% url 'Booking_app:portalview' %}">Back to Portal</a></li>
         </ul>
     </nav>
 
@@ -76,10 +75,7 @@
       </div>
     </main>
       <div class="Logout">
-        <a href="{% url 'management:logoutview' %}" class="home-btn"> Logout</a>
-                                 
-        
-
+        <a href="{% url 'Booking_app:logoutview' %}" class="Customer_app-btn"> Logout</a>                             
        </div>
        {% endblock content %}
        {% comment %} <footer>

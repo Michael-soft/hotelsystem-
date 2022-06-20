@@ -1,6 +1,5 @@
 
-{% extends "Booking\User.html" %}
-
+{% extends "Booking_app\User.html" %}
 
 {% block content %}
 
@@ -14,10 +13,10 @@
 <h3>WELCOME TO THE BOOKING PORTAL, SELECT YOUR OPTION FROM THE AVAILABLE OPTIONS</h3>
 
 <ul style="list-style-type:none">
-  <li><a href="{% url 'Booking:loginview' %}">Login</a></li>
-  <li><a href="{% url 'Booking:Managerview' %}">Register</a></li>
-  <li><a href="{% url 'Booking:Userview' %}">Add User</a></li>
-  <li><a href="{% url 'Booking:portalview' %}">Back to Portal</a></li>
+  <li><a href="{% url 'Booking_app:loginview' %}">Login</a></li>
+  <li><a href="{% url 'Booking_app:Managerview' %}">Register</a></li>
+  <li><a href="{% url 'Booking_app:Userview' %}">Add User</a></li>
+  <li><a href="{% url 'Booking_app:portalview' %}">Back to Portal</a></li>
   <li><a href="{% url 'Customer_app:Customer_appview' %}" HOTEL</a></li>
   </ul>
         <p> you must first login into your portal</P>
